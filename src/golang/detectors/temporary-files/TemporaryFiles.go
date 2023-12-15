@@ -19,7 +19,7 @@ func temporaryFilesNoncompliant() {
 
 // {fact rule=insecure-temp-file@v1.0 defects=0}
 func temporaryFilesCompliant() {
-	// Compliant : File creation in shared tmp directory with using `os.CreateTemp`.
+	// Compliant: File creation in shared tmp directory with using `os.CreateTemp`.
 	file, err := os.CreateTemp("/tmp", "file")
 	if err != nil {
 		fmt.Println("Error occurred during file creation")

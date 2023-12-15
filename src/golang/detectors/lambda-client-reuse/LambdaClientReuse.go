@@ -41,6 +41,7 @@ func LambdaHandlerNoncompliant(ctx context.Context) (string, error) {
 
 // {fact rule=lambda-client-reuse@v1.0 defects=0}
 func LambdaHandlerCompliant(ctx context.Context) (string, error) {
+    // Compliant: reuse S3 client.
 	result, err := s3Client.ListBuckets(ctx, &s3.ListBucketsInput{})
 	if err != nil {
 		log.Fatalf("Error listing buckets: %v", err)
