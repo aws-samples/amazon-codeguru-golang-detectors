@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// {fact rule=use-filepath-join@v1.0 defects=1}
+// {fact rule=useless-if-conditional@v1.0 defects=1}
 func uselessIfConditionNoncompliant(num int){
 	// Noncompliant: Both `if` have same condition.
 	if num == 3 {
@@ -13,7 +13,7 @@ func uselessIfConditionNoncompliant(num int){
 }
 // {/fact}
 
-// {fact rule=use-filepath-join@v1.0 defects=0}
+// {fact rule=useless-if-conditional@v1.0 defects=0}
 func uselessIfConditionCompliant(num int){
 	// Compliant: No unnecessary `if` condition.
 	if num == 3 {
