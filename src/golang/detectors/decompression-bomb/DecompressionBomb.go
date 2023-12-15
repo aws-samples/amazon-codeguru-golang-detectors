@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-// {fact rule=denial-of-service@v1.0 defects=1}
+// {fact rule=decompression-bomb@v1.0 defects=1}
 func decompressionBombNoncompliant() {
 	b := []byte{120, 156, 202, 72, 205, 201, 201, 215, 81, 40, 207,
 		47, 202, 73, 225, 2, 4, 0, 0, 255, 255, 33, 231, 4, 147}
@@ -26,7 +26,7 @@ func decompressionBombNoncompliant() {
 }
 // {/fact}
 
-// {fact rule=denial-of-service@v1.0 defects=0}
+// {fact rule=decompression-bomb@v1.0 defects=0}
 func decompressionBombCompliant() {
 	b := []byte{120, 156, 202, 72, 205, 201, 201, 215, 81, 40, 207,
 		47, 202, 73, 225, 2, 4, 0, 0, 255, 255, 33, 231, 4, 147}

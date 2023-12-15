@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// {fact rule=null-pointer-dereference@v1.0 defects=1}
+// {fact rule=nil-pointer-dereference@v1.0 defects=1}
 func nilPointerDereferenceNoncompliant() {
     var ptr *int
     // Noncompliant: Accessing memory address that is not initialized.
@@ -10,7 +10,7 @@ func nilPointerDereferenceNoncompliant() {
 }
 // {/fact}
 
-// {fact rule=null-pointer-dereference@v1.0 defects=0}
+// {fact rule=nil-pointer-dereference@v1.0 defects=0}
 func nilPointerDereferenceCompliant() {
     var ptr *int
     if ptr != nil {

@@ -5,7 +5,7 @@ import (
 	"log"
 )
 
-// {fact rule=do-not-auto-add-or-warning-missing-hostkey-policy@v1.0 defects=1}
+// {fact rule=insecure-ignore-host-key@v1.0 defects=1}
 func insecureIgnoreHostKeyNoncompliant() {
     // Noncompliant: `ssh.InsecureIgnoreHostKey()` disables trusted host validation.
 	config := &ssh.ClientConfig{
@@ -22,7 +22,7 @@ func insecureIgnoreHostKeyNoncompliant() {
 }
 // {/fact}
 
-// {fact rule=do-not-auto-add-or-warning-missing-hostkey-policy@v1.0 defects=0}
+// {fact rule=insecure-ignore-host-key@v1.0 defects=0}
 func insecureIgnoreHostKeyCompliant(key ssh.PublicKey) {
     // Compliant: Used `ssh.ClientConfig`'s `HostKeyCallback`.
 	config := &ssh.ClientConfig{

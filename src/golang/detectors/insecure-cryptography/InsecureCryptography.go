@@ -17,7 +17,7 @@ func (user *User) setPassword(password string) {
 // {fact rule=insecure-cryptography@v1.0 defects=1}
 func insecureCryptographyNoncompliant(user *User, passText string) {
 	data := []byte(passText)
-	// Noncompliant : md5 used as password.
+	// Noncompliant: md5 used as password.
 	hash := md5.Sum(data)
 	password := fmt.Sprintf("%x", hash)
 	user.setPassword(password)

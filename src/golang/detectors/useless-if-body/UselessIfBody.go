@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// {fact rule=best-practices@v1.0 defects=1}
+// {fact rule=useless-if-body@v1.0 defects=1}
 func uselessIfBodyNoncompliant(num int){
 	// Noncompliant: Both `if` and `else` have same body.
 	if num == 3 {
@@ -13,7 +13,7 @@ func uselessIfBodyNoncompliant(num int){
 }
 // {/fact}
 
-// {fact rule=best-practices@v1.0 defects=0}
+// {fact rule=useless-if-body@v1.0 defects=0}
 func uselessIfBodyCompliant(num int){
 	// Compliant: `if` and `else` have different body.
 	if num == 3 {
