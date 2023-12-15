@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// {fact rule=exposure-through-directory-listing@v1.0 defects=1}
+// {fact rule=http-trace-file-server-as-handler@v1.0 defects=1}
 func httpTraceFileServerAsHandlerNoncompliant() {
 	//Noncompliant: `http.FileServer` used
 	certFile := "YOUR_CERT_FILE"
@@ -16,7 +16,7 @@ func httpTraceFileServerAsHandlerNoncompliant() {
 
 // {/fact}
 
-// {fact rule=exposure-through-directory-listing@v1.0 defects=0}
+// {fact rule=http-trace-file-server-as-handler@v1.0 defects=0}
 func httpTraceFileServerAsHandlerCompliant() {
 	//Compliant: `http.FileServer` not used
 	p := func(w http.ResponseWriter, _ *http.Request) {

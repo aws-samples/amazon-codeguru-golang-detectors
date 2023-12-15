@@ -7,7 +7,7 @@ import (
 	_ "net/http/pprof"
 )
 
-// {fact rule=detect-activated-debug-feature@v1.0 defects=1}
+// {fact rule=pprof-endpoint@v1.0 defects=1}
 func pprofDebugExposureNoncompliant() {
 	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Not Ok")
@@ -20,7 +20,7 @@ func pprofDebugExposureNoncompliant() {
 
 // {/fact}
 
-// {fact rule=detect-activated-debug-feature@v1.0 defects=0}
+// {fact rule=pprof-endpoint@v1.0 defects=0}
 func pprofDebugExposureCompliant() {
 	http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Ok")

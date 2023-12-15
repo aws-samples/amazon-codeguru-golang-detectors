@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// {fact rule=best-practices@v1.0 defects=1}
+// {fact rule=hidden-goroutine@v1.0 defects=1}
 func hiddenGoroutineNoncompliant() {
 	// Noncompliant: Hidden goroutines inside functions.
 	go func() {
@@ -18,7 +18,7 @@ func hiddenGoroutineNoncompliant() {
 
 // {/fact}
 
-// {fact rule=best-practices@v1.0 defects=0}
+// {fact rule=hidden-goroutine@v1.0 defects=0}
 func hiddenGoroutineCompliant() {
 	// Compliant: There is other operations along with goroutine.
 	if num := 17; num < 0 {

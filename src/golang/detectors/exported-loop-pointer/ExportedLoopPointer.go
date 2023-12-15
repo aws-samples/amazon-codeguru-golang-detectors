@@ -4,7 +4,7 @@ import (
     "fmt"
 )
 
-// {fact rule=best-practices@v1.0 defects=1}
+// {fact rule=exported-loop-pointer@v1.0 defects=1}
 func exportedLoopPointerNoncompliant() {
     names := []string{"Jack", "Tom", "Sam", "Mark", "John"}
     var fs []func()
@@ -17,7 +17,7 @@ func exportedLoopPointerNoncompliant() {
 }
 // {/fact}
 
-// {fact rule=best-practices@v1.0 defects=0}
+// {fact rule=exported-loop-pointer@v1.0 defects=0}
 func exportedLoopPointerCompliant() {
     names := []string{"Jack", "Tom", "Sam", "Mark", "John"}
     var fs []func()

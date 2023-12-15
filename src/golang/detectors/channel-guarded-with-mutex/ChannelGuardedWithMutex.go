@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-// {fact rule=best-practices@v1.0 defects=1}
+// {fact rule=channel-guarded-with-mutex@v1.0 defects=1}
 func channelGuardedWithMutexNoncompliant() {
 	var mutex = &sync.Mutex{}
 	msg := make(chan string)
@@ -23,7 +23,7 @@ func channelGuardedWithMutexNoncompliant() {
 
 // {/fact}
 
-// {fact rule=best-practices@v1.0 defects=0}
+// {fact rule=channel-guarded-with-mutex@v1.0 defects=0}
 func channelGuardedWithMutexCompliant() {
 	msg := make(chan string)
 
